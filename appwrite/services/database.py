@@ -77,7 +77,7 @@ class Database(Service):
         params = {}
         path = '/database/collections/{collectionId}/documents'
         path = path.replace('{collectionId}', collection_id)                
-        params['filters'] = filters
+        params['filters[]'] = filters
         params['offset'] = offset
         params['limit'] = limit
         params['orderField'] = order_field
